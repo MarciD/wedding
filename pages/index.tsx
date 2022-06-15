@@ -53,8 +53,18 @@ const Home: NextPage = () => {
                 <p>Hier erfährst du alles über die Locations</p>
 
                 <ul>
-                  <li onClick={() => slideTo(1.1)}>Standesamt (Trauung)</li>
-                  <li onClick={() => slideTo(1.2)}>Spreespeicher (PartEy)</li>
+                  <li>
+                    {' '}
+                    <button type={'button'} onClick={() => slideTo(1.1)}>
+                      Standesamt (Trauung)
+                    </button>
+                  </li>
+                  <li>
+                    {' '}
+                    <button type={'button'} onClick={() => slideTo(1.2)}>
+                      Spreespeicher (PartEy)
+                    </button>
+                  </li>
                 </ul>
 
                 <button
