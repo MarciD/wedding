@@ -26,6 +26,7 @@ const Card: FC<PropsWithChildren<CardProps>> = ({ title, image, children }) => {
       <div className="w-1/3">
         <img
           className="rounded-lg shadow-lg antialiased"
+          style={{ maxWidth: '80px' }}
           src={image}
           alt={'title'}
         />
