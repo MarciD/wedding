@@ -23,7 +23,7 @@ const Card: FC<PropsWithChildren<CardProps>> = ({ title, image, children }) => {
         boxShadow: '0 4px 12px -6px rgba(0,0,0,0.6)',
       }}
     >
-      <div className="md:w-1/3 w-full">
+      <div className="w-1/3">
         <img
           className="rounded-lg shadow-lg antialiased"
           src={image}
