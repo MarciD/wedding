@@ -2,11 +2,11 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 import type { NextPage } from 'next';
+import Image from 'next/image';
 import { useState } from 'react';
 import { Keyboard, Mousewheel, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-import Card from '../src/components/Card';
 import SlideView from '../src/components/SlideView';
 
 const Home: NextPage = () => {
@@ -21,174 +21,160 @@ const Home: NextPage = () => {
   };
 
   return (
-    <div className={'container'}>
-      <Swiper
-        direction={'vertical'}
-        scrollbar={true}
-        pagination={{
-          clickable: true,
-        }}
-        freeMode={true}
-        mousewheel={true}
-        keyboard={true}
-        modules={[Pagination, Mousewheel, Keyboard]}
-        onSwiper={setSwiper}
-      >
-        <SwiperSlide>
-          <SlideView className={'flex-col sm:flex-row'}>
-            <div className={'w-64 text-left'}>
-              <h1 className={'font-heading text-4xl md:text-9xl'}>WEDDING 1</h1>
-              <p className={'font-body text-base md:text-2xl'}>
-                Wir heiraten und Ihr seid dabei!
-              </p>
-            </div>
-            <div className={'flex flex-1 flex-col'}>
-              <Card
-                title={'Locations'}
-                image={
-                  // eslint-disable-next-line max-len
-                  'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png'
-                }
-              >
-                <p>Hier erfährst du alles über die Locations</p>
-
-                <ul>
-                  <li>
-                    {' '}
-                    <button type={'button'} onClick={() => slideTo(1.1)}>
-                      Standesamt (Trauung)
-                    </button>
-                  </li>
-                  <li>
-                    {' '}
-                    <button type={'button'} onClick={() => slideTo(1.2)}>
-                      Spreespeicher (PartEy)
-                    </button>
-                  </li>
-                </ul>
-
-                <button
-                  type={'button'}
-                  className={
-                    // eslint-disable-next-line max-len
-                    'bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'
-                  }
-                  onClick={() => slideTo(1)}
-                >
-                  Zu den Location infos
-                </button>
-              </Card>
-              <Card
-                title={'Zeitplan'}
-                image={
-                  // eslint-disable-next-line max-len
-                  'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png'
-                }
-              >
-                <button
-                  type={'button'}
-                  className={
-                    // eslint-disable-next-line max-len
-                    'bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'
-                  }
-                  onClick={() => slideTo(2)}
-                >
-                  Zu den Zeitplan infos
-                </button>
-              </Card>
-              <Card
-                title={'Infos'}
-                image={
-                  // eslint-disable-next-line max-len
-                  'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png'
-                }
-              >
-                <button
-                  type={'button'}
-                  className={
-                    // eslint-disable-next-line max-len
-                    'bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'
-                  }
-                  onClick={() => slideTo(3)}
-                >
-                  Zu den Infos
-                </button>
-              </Card>
-              <Card
-                title={'Fotos'}
-                image={
-                  // eslint-disable-next-line max-len
-                  'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png'
-                }
-              >
-                <button
-                  type={'button'}
-                  className={
-                    // eslint-disable-next-line max-len
-                    'bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'
-                  }
-                  onClick={() => slideTo(4)}
-                >
-                  Zu den Fotos infos
-                </button>
-              </Card>
-            </div>
-          </SlideView>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <Swiper
-            direction={'horizontal'}
-            scrollbar={true}
-            pagination={{
-              clickable: true,
+    <Swiper
+      direction={'vertical'}
+      scrollbar={true}
+      pagination={{
+        clickable: true,
+      }}
+      freeMode={true}
+      mousewheel={true}
+      keyboard={true}
+      modules={[Pagination, Mousewheel, Keyboard]}
+      onSwiper={setSwiper}
+    >
+      <SwiperSlide>
+        <SlideView
+          className={'flex-col items-center justify-center'}
+          style={{
+            background:
+              // eslint-disable-next-line max-len
+              'linear-gradient(0deg, rgba(255, 0, 150, 0.3), rgba(255, 0, 150, 0.3)), url(/img/hero.jpg)',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+          }}
+        >
+          <div
+            className={'text-center font-extrabold mix-blend-lighten px-8 py-6'}
+            style={{
+              backgroundColor: 'rgba(255,255,255,.9)',
+              maxWidth: '320px',
             }}
-            freeMode={true}
-            mousewheel={true}
-            keyboard={true}
-            modules={[Pagination, Mousewheel, Keyboard]}
-            onSwiper={setSwiperB}
           >
-            <SwiperSlide>
-              <SlideView>
-                <h1>Location</h1>
-              </SlideView>
-            </SwiperSlide>
-            <SwiperSlide>
-              <SlideView>
-                <h1>WEDDING 2.1</h1>
-              </SlideView>
-            </SwiperSlide>
-            <SwiperSlide>
-              <SlideView>
-                <h1>WEDDING 2.2</h1>
-              </SlideView>
-            </SwiperSlide>
-          </Swiper>
-        </SwiperSlide>
-        <SwiperSlide>
-          <SlideView>
-            <article>
-              <h1>Zeitplan</h1>
-            </article>
-          </SlideView>
-        </SwiperSlide>
-        <SwiperSlide>
-          <SlideView>
-            <article>
-              <h1>Infos</h1>
-            </article>
-          </SlideView>
-        </SwiperSlide>
-        <SwiperSlide>
-          <SlideView>
-            <article>
-              <h1>Fotos</h1>
-            </article>
-          </SlideView>
-        </SwiperSlide>
-      </Swiper>
-    </div>
+            <h1 className={'font-heading text-4xl md:text-6xl'}>
+              Wir Heiraten
+            </h1>
+          </div>
+          <p className={'font-body text-base text-white'}>
+            Hier findet Ihr alle Infos zu Unserem Tag.
+          </p>
+
+          <div className={'flex justify-between w-full'}>
+            <div className={'flex flex-row text-white text-center'}>
+              <div className={'items-center justify-start ml-4 border-r'}>
+                <h2
+                  className={
+                    'font-heading font-extrabold text-6xl mb-4 cursor-pointer'
+                  }
+                >
+                  <button onClick={() => slideTo(1)}>Locations</button>
+                </h2>
+                <button
+                  className={'w-full text-left mb-1 font-light'}
+                  type={'button'}
+                  onClick={() => slideTo(1.1)}
+                >
+                  Standesamt (Trauung)
+                </button>
+                <button
+                  className={'w-full text-left font-light'}
+                  type={'button'}
+                  onClick={() => slideTo(1.2)}
+                >
+                  Spreespeicher (PartEy)
+                </button>
+              </div>
+            </div>
+
+            <div className={'flex flex-row text-white'}>
+              <div className={'items-center justify-start ml-4 border-r'}>
+                <h2
+                  className={
+                    'font-heading font-extrabold text-6xl mb-4 cursor-pointer'
+                  }
+                >
+                  <button onClick={() => slideTo(2)}>Zeitplan</button>
+                </h2>
+              </div>
+            </div>
+            <div className={'flex flex-row text-white'}>
+              <div className={'items-center justify-start ml-4 border-r'}>
+                <h2
+                  className={
+                    'font-heading font-extrabold text-6xl mb-4 cursor-pointer'
+                  }
+                >
+                  <button onClick={() => slideTo(3)}>Gästeinfos</button>
+                </h2>
+              </div>
+            </div>
+            <div className={'flex flex-row text-white'}>
+              <div className={'items-center justify-start ml-4 border-r'}>
+                <h2
+                  className={
+                    'font-heading font-extrabold text-6xl mb-4 cursor-pointer'
+                  }
+                >
+                  <button onClick={() => slideTo(4)}>Fotos</button>
+                </h2>
+              </div>
+            </div>
+          </div>
+        </SlideView>
+      </SwiperSlide>
+
+      <SwiperSlide>
+        <Swiper
+          direction={'horizontal'}
+          scrollbar={true}
+          pagination={{
+            clickable: true,
+          }}
+          freeMode={true}
+          mousewheel={true}
+          keyboard={true}
+          modules={[Pagination, Mousewheel, Keyboard]}
+          onSwiper={setSwiperB}
+        >
+          <SwiperSlide>
+            <SlideView>
+              <h1>Location</h1>
+            </SlideView>
+          </SwiperSlide>
+          <SwiperSlide>
+            <SlideView>
+              <h1>WEDDING 2.1</h1>
+            </SlideView>
+          </SwiperSlide>
+          <SwiperSlide>
+            <SlideView>
+              <h1>WEDDING 2.2</h1>
+            </SlideView>
+          </SwiperSlide>
+        </Swiper>
+      </SwiperSlide>
+      <SwiperSlide>
+        <SlideView>
+          <article>
+            <h1>Zeitplan</h1>
+          </article>
+        </SlideView>
+      </SwiperSlide>
+      <SwiperSlide>
+        <SlideView>
+          <article>
+            <h1>Infos</h1>
+          </article>
+        </SlideView>
+      </SwiperSlide>
+      <SwiperSlide>
+        <SlideView>
+          <article>
+            <h1>Fotos</h1>
+          </article>
+        </SlideView>
+      </SwiperSlide>
+    </Swiper>
   );
 };
 

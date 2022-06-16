@@ -1,8 +1,10 @@
 @import '@fontsource/inspiration/400.css';
-@import '@fontsource/roboto/400.css';
+@import '@fontsource/roboto/300.css';
 
+/* purgecss start ignore */
 @tailwind base;
 @tailwind components;
+/* purgecss end ignore */
 @tailwind utilities;
 
 html,
@@ -22,7 +24,7 @@ a {
     box-sizing: border-box;
 }
 
-#__next > .container {
+#__next {
     height: 100vh;
     min-height: 100vh;
     min-height: -webkit-fill-available;
@@ -34,10 +36,6 @@ a {
 }
 
 .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-
     /* Center slide text vertically */
     display: -webkit-box;
     display: -ms-flexbox;

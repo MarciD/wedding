@@ -5,7 +5,7 @@ module.exports = {
     extend: {},
     fontFamily: {
       heading: ['Inspiration', 'serif'],
-      body: ['Robot', 'sans-serif'],
+      body: ['Roboto', 'sans-serif'],
     },
   },
   plugins: [],
