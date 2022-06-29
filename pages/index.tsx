@@ -137,6 +137,7 @@ const Home: NextPage = () => {
                   </p>
                   <a
                     href={
+                      // eslint-disable-next-line max-len
                       'https://www.google.de/maps/place/Alice-Salomon-Platz+3,+12627+Berlin/@52.5372744,13.5998398,16.15z/data=!4m13!1m7!3m6!1s0x47a84a3495fd9a15:0x317596d56cb78706!2sAlice-Salomon-Platz+3,+12627+Berlin!3b1!8m2!3d52.5372387!4d13.6037516!3m4!1s0x47a84a3495fd9a15:0x317596d56cb78706!8m2!3d52.5372387!4d13.6037516'
                     }
                     target={'_blank'}
