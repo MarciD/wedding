@@ -2,11 +2,12 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 import type { NextPage } from 'next';
-import Image from 'next/image';
 import { useState } from 'react';
 import { Keyboard, Mousewheel, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
+import Card from '../src/components/Card';
+import Navigation from '../src/components/Navigation';
 import SlideView from '../src/components/SlideView';
 
 const Home: NextPage = () => {
@@ -33,94 +34,32 @@ const Home: NextPage = () => {
       modules={[Pagination, Mousewheel, Keyboard]}
       onSwiper={setSwiper}
     >
-      <SwiperSlide>
-        <SlideView
-          className={'flex-col items-center justify-center'}
-          style={{
-            background:
-              // eslint-disable-next-line max-len
-              'linear-gradient(0deg, rgba(255, 0, 150, 0.3), rgba(255, 0, 150, 0.3)), url(/img/hero.jpg)',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-          }}
-        >
+      <SwiperSlide
+        style={{
+          background:
+            // eslint-disable-next-line max-len
+            'linear-gradient(0deg, rgba(255, 0, 150, 0.3), rgba(255, 0, 150, 0.3)), url(/img/hero.jpg)',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover',
+          flexDirection: 'column',
+        }}
+      >
+        <SlideView className={'flex-col items-center justify-center'}>
           <div
-            className={'text-center font-extrabold mix-blend-lighten px-8 py-6'}
+            className={'text-center w-full mix-blend-lighten px-8 py-12'}
             style={{
               backgroundColor: 'rgba(255,255,255,.9)',
-              maxWidth: '320px',
+              maxWidth: '460px',
             }}
           >
-            <h1 className={'font-heading text-4xl md:text-6xl'}>
+            <h1 className={'font-heading font-extrabold text-6xl md:text-8xl'}>
               Wir Heiraten
             </h1>
-          </div>
-          <p className={'font-body text-base text-white'}>
-            Hier findet Ihr alle Infos zu Unserem Tag.
-          </p>
-
-          <div className={'flex justify-between w-full'}>
-            <div className={'flex flex-row text-white text-center'}>
-              <div className={'items-center justify-start ml-4 border-r'}>
-                <h2
-                  className={
-                    'font-heading font-extrabold text-6xl mb-4 cursor-pointer'
-                  }
-                >
-                  <button onClick={() => slideTo(1)}>Locations</button>
-                </h2>
-                <button
-                  className={'w-full text-left mb-1 font-light'}
-                  type={'button'}
-                  onClick={() => slideTo(1.1)}
-                >
-                  Standesamt (Trauung)
-                </button>
-                <button
-                  className={'w-full text-left font-light'}
-                  type={'button'}
-                  onClick={() => slideTo(1.2)}
-                >
-                  Spreespeicher (PartEy)
-                </button>
-              </div>
-            </div>
-
-            <div className={'flex flex-row text-white'}>
-              <div className={'items-center justify-start ml-4 border-r'}>
-                <h2
-                  className={
-                    'font-heading font-extrabold text-6xl mb-4 cursor-pointer'
-                  }
-                >
-                  <button onClick={() => slideTo(2)}>Zeitplan</button>
-                </h2>
-              </div>
-            </div>
-            <div className={'flex flex-row text-white'}>
-              <div className={'items-center justify-start ml-4 border-r'}>
-                <h2
-                  className={
-                    'font-heading font-extrabold text-6xl mb-4 cursor-pointer'
-                  }
-                >
-                  <button onClick={() => slideTo(3)}>Gästeinfos</button>
-                </h2>
-              </div>
-            </div>
-            <div className={'flex flex-row text-white'}>
-              <div className={'items-center justify-start ml-4 border-r'}>
-                <h2
-                  className={
-                    'font-heading font-extrabold text-6xl mb-4 cursor-pointer'
-                  }
-                >
-                  <button onClick={() => slideTo(4)}>Fotos</button>
-                </h2>
-              </div>
-            </div>
+            <span className={'font-body'}>am 17.078.2022</span>
           </div>
         </SlideView>
+        <Navigation slideTo={slideTo} />
       </SwiperSlide>
 
       <SwiperSlide>
@@ -136,14 +75,78 @@ const Home: NextPage = () => {
           modules={[Pagination, Mousewheel, Keyboard]}
           onSwiper={setSwiperB}
         >
-          <SwiperSlide>
-            <SlideView>
-              <h1>Location</h1>
+          <SwiperSlide
+            style={{
+              background:
+                // eslint-disable-next-line max-len
+                'linear-gradient(0deg, rgba(255, 0, 150, 0.3), rgba(255, 0, 150, 0.3)), url(/img/bg-locations.png)',
+              backgroundPosition: 'right',
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: 'cover',
+              flexDirection: 'column',
+            }}
+          >
+            <SlideView className={'flex-col items-center justify-center'}>
+              <div
+                className={'text-center w-full mix-blend-lighten px-8 py-12'}
+                style={{
+                  backgroundColor: 'rgba(255,255,255,.9)',
+                  maxWidth: '460px',
+                }}
+              >
+                <h1
+                  className={'font-heading font-extrabold text-6xl md:text-8xl'}
+                >
+                  Locations
+                </h1>
+              </div>
             </SlideView>
           </SwiperSlide>
-          <SwiperSlide>
-            <SlideView>
-              <h1>WEDDING 2.1</h1>
+          <SwiperSlide
+            style={{
+              background:
+                // eslint-disable-next-line max-len
+                'linear-gradient(0deg, rgba(255, 0, 150, 0.3), rgba(255, 0, 150, 0.3)), url(/img/bg-locations.png)',
+              backgroundPosition: 'right',
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: 'cover',
+              flexDirection: 'column',
+            }}
+          >
+            <SlideView className={'flex-col items-center justify-center'}>
+              <div
+                className={
+                  'text-center w-full mix-blend-lighten px-8 py-12 mb-48'
+                }
+                style={{
+                  backgroundColor: 'rgba(255,255,255,.9)',
+                  maxWidth: '460px',
+                }}
+              >
+                <h1
+                  className={'font-heading font-extrabold text-6xl md:text-8xl'}
+                >
+                  Standesamt
+                </h1>
+              </div>
+              <div className={'font-body text-white'}>
+                <div>
+                  <p className={'text-2xl mb-4'}>
+                    Alice-Salomon-Platz 3<br />
+                    12627 Berlin
+                  </p>
+                  <a
+                    href={
+                      'https://www.google.de/maps/place/Alice-Salomon-Platz+3,+12627+Berlin/@52.5372744,13.5998398,16.15z/data=!4m13!1m7!3m6!1s0x47a84a3495fd9a15:0x317596d56cb78706!2sAlice-Salomon-Platz+3,+12627+Berlin!3b1!8m2!3d52.5372387!4d13.6037516!3m4!1s0x47a84a3495fd9a15:0x317596d56cb78706!8m2!3d52.5372387!4d13.6037516'
+                    }
+                    target={'_blank'}
+                    rel="noreferrer"
+                  >
+                    Anfahrt über Google Maps
+                  </a>
+                </div>
+                <div></div>
+              </div>
             </SlideView>
           </SwiperSlide>
           <SwiperSlide>

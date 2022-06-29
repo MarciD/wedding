@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@fontsource/inspiration": "^4.5.8",
+    "@fontsource/playfair-display": "^4.5.10",
     "@fontsource/roboto": "^4.5.7",
     "@typescript-eslint/eslint-plugin": "^5.28.0",
     "autoprefixer": "^10.4.7",

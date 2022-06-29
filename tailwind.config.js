@@ -4,8 +4,8 @@ module.exports = {
   theme: {
     extend: {},
     fontFamily: {
-      heading: ['Inspiration', 'serif'],
-      body: ['Roboto', 'sans-serif'],
+      heading: ['Inspiration', 'sans-serif'],
+      body: ['Playfair Display', 'serif'],
     },
   },
   plugins: [],

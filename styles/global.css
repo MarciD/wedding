@@ -1,5 +1,5 @@
 @import '@fontsource/inspiration/400.css';
-@import '@fontsource/roboto/300.css';
+@import '@fontsource/playfair-display/400.css';
 
 /* purgecss start ignore */
 @tailwind base;
@@ -11,8 +11,6 @@ html,
 body {
     padding: 0;
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
@@ -35,7 +33,16 @@ a {
     height: 100%;
 }
 
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .swiper-slide {
+    text-align: center;
+    background: #fff;
     /* Center slide text vertically */
     display: -webkit-box;
     display: -ms-flexbox;

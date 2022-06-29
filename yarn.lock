@@ -129,6 +129,11 @@
   resolved "https://registry.yarnpkg.com/@fontsource/inspiration/-/inspiration-4.5.8.tgz#436c24daad1c92009c640c433bef116e4d50b798"
   integrity sha512-ytGPJiP+sxy6WV2TGZNIW7GzDZcvDyUK4N3v0yHz3IP5aP/5G5BxC00NkXbIZsf7OX7BEk/XByMw8LVLrbJ/SA==
 
+"@fontsource/playfair-display@^4.5.10":
+  version "4.5.10"
+  resolved "https://registry.yarnpkg.com/@fontsource/playfair-display/-/playfair-display-4.5.10.tgz#3680f7027b5f3b0f49097b56cf2671846495db44"
+  integrity sha512-0OXXCJF6wflfJ7HoDcHmAKckubT4BcqGU0JcISjw/SceLzYP6FoycsJJ1jRU01GGrovuba9pYIs6R4y90fk/uA==
+
 "@fontsource/roboto@^4.5.7":
   version "4.5.7"
   resolved "https://registry.yarnpkg.com/@fontsource/roboto/-/roboto-4.5.7.tgz#292740a52fa2bac61b89f92e1c588037defe65cb"
