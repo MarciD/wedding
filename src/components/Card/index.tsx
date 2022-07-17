@@ -9,7 +9,7 @@ const Card: FC<PropsWithChildren<CardProps>> = ({ className, children }) => {
     <div
       className={
         // eslint-disable-next-line max-len
-        `flex flex-row text-white justify-center text-center  w-6/12 sm:w-3/12 ${
+        `flex flex-row justify-center text-center  w-6/12 sm:w-3/12 ${
           className || ''
         }`
       }

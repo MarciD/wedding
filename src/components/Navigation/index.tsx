@@ -23,9 +23,7 @@ const Navigation = ({ slideTo }: NavigationProps): JSX.Element => {
         </h2>
       </Card>
 
-      <div
-        className={'flex flex-row  justify-center text-white w-6/12 sm:w-3/12'}
-      >
+      <div className={'flex flex-row  justify-center w-6/12 sm:w-3/12'}>
         <div className={'items-center justify-start'}>
           <h2
             className={
@@ -36,9 +34,7 @@ const Navigation = ({ slideTo }: NavigationProps): JSX.Element => {
           </h2>
         </div>
       </div>
-      <div
-        className={'flex flex-row justify-center text-white  w-6/12 sm:w-3/12'}
-      >
+      <div className={'flex flex-row justify-center  w-6/12 sm:w-3/12'}>
         <div className={'items-center justify-start '}>
           <h2
             className={
