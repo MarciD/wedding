@@ -2,13 +2,12 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 import type { NextPage } from 'next';
-import { useState } from 'react';
 
 const Home: NextPage = () => {
   return (
     <div>
       {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
-      <video autoPlay loop muted className={'sm:object-left'}>
+      <video autoPlay loop muted playsInline className={'sm:object-left'}>
         <source src="/video/bg-video.mov" type="video/mp4" />
       </video>
 
