@@ -41,6 +41,7 @@ const Home: NextPage = () => {
           <div className={'inline-flex-space'}>
             <Link
               href={`https://wa.me/491736999240?text=${encodeURI(
+                // eslint-disable-next-line max-len
                 'Wir "[Hier alle eure Namen und alter]" freuen uns sehr bei eurer Hochzeit dabei sein zu dürfen... Liebe ❤️'
               )}`}
             >
