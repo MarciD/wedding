@@ -7,6 +7,10 @@
 /* purgecss end ignore */
 @tailwind utilities;
 
+html {
+    height: -webkit-fill-available;
+}
+
 html,
 body {
     padding: 0;
@@ -26,9 +30,11 @@ body {
     font-family: "Playfair Display", serif;
     position: relative;
     min-height: 100vh;
+    min-height: -webkit-fill-available;
     max-height: 100vh;
-    max-height: --webkit-fill-available;
+    max-height: -webkit-fill-available;
     color: white;
+    text-shadow: 2px 2px 8px rgba(0,0,0,.4);
 }
 
 h1, h2, h3 {
@@ -36,49 +42,57 @@ h1, h2, h3 {
     font-size: 8rem;
     letter-spacing: -.05rem;
     line-height: 1;
+    text-shadow: 2px 2px 8px rgba(0,0,0,.4);
 }
 
 #__next {
     width: calc(100vw - (100vw - 100%));
     height: 100vh;
+    max-height: -webkit-fill-available;
     text-align: center;
     scroll-snap-type: y mandatory;
     scroll-padding: 10px;
     overflow-y: scroll;
 
     > .view {
-        height: 100%;
         scroll-snap-align: center;
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 24px;
+        height: 100%;
+        flex: 1;
+        overflow: hidden;
     }
 }
 
 .bg-video {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: left;
+    object-position: top center;
 }
 
 .main-text-wrapper {
     mix-blend-mode: overlay;
     color: #fff;
     text-align: center;
-    position: relative;
-    top: -70px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 24px;
+    box-shadow: 0 0 24px white;
 
     > h1 {
         border-top: 2px solid white;
         border-bottom: 2px solid white;
-        padding-bottom: 24px;
-        padding-top: 24px;
-        text-shadow: 2px 2px 8px rgba(0,0,0,.4);
+        padding-bottom: 8px;
+        padding-top: 12px;
     }
 
     > h2 {
@@ -89,19 +103,33 @@ h1, h2, h3 {
     }
 }
 
-.card {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    mix-blend-mode: overlay;
-    background-color: rgba(255,255,255,.2);
-    backdrop-filter: blur(16px);
-    border-radius: 16px;
-    min-height: 240px;
-    width: 100%;
-
-    > h1 {
-        font-size: 3rem;
+.view:not(:first-of-type) {
+    .main-text-wrapper {
+        h1 {
+            color: red;
+        }
     }
 }
 
+.inline-flex-space {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 48px;
+
+    > * {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        > svg {
+            margin: 0 auto 12px;
+        }
+    }
+
+    > p {
+        font-size: 12px;
+    }
+}
