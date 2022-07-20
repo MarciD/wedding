@@ -1,5 +1,5 @@
 @import '@fontsource/inspiration/400.css';
-@import '@fontsource/playfair-display/400.css';
+@import '@fontsource/playfair-display/600.css';
 
 /* purgecss start ignore */
 @tailwind base;
@@ -28,13 +28,14 @@ a {
 
 body {
     font-family: "Playfair Display", serif;
+    font-weight: 600;
     position: relative;
     min-height: 100vh;
     min-height: -webkit-fill-available;
     max-height: 100vh;
     max-height: -webkit-fill-available;
     color: white;
-    text-shadow: 2px 2px 8px rgba(0,0,0,.4);
+    text-shadow: 1px 1px 0 black;
 }
 
 h1, h2, h3 {
@@ -42,7 +43,6 @@ h1, h2, h3 {
     font-size: 8rem;
     letter-spacing: -.05rem;
     line-height: 1;
-    text-shadow: 2px 2px 8px rgba(0,0,0,.4);
 }
 
 #__next {
@@ -63,6 +63,10 @@ h1, h2, h3 {
         flex: 1;
         overflow: hidden;
     }
+}
+
+.max-width-460 {
+    max-width: 460px;
 }
 
 .bg-video {
@@ -86,7 +90,6 @@ h1, h2, h3 {
     align-items: center;
     flex: 1;
     padding: 24px;
-    box-shadow: 0 0 24px white;
 
     > h1 {
         border-top: 2px solid white;
@@ -99,14 +102,14 @@ h1, h2, h3 {
         font-family: "Playfair Display", serif;
         padding-bottom: 12px;
         font-size: 16px;
-        text-shadow: 0 0 2px -2px black;
     }
 }
 
 .view:not(:first-of-type) {
     .main-text-wrapper {
         h1 {
-            color: red;
+            border: none;
+            font-size: 4rem;
         }
     }
 }
