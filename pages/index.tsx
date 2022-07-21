@@ -64,12 +64,34 @@ const Home: NextPage = () => {
       <div className="view">
         <div className="main-text-wrapper max-width-460">
           <h1 className={'mb-8'}>Wir Trauen uns</h1>
-          <p>...um 12:30Uhr im Standesamt Helle Mitte.</p>
+          <p>...um 12:30 Uhr im Standesamt Helle Mitte.</p>
           <p className={'my-4'}>
             Wer dabei sein möchte soll sich bitte um 12:00Uhr vor dem Standesamt
             befinden.
           </p>
           <p>Bei der Trauung selbst sind die Plätze jedoch begrenzt.</p>
+          <p className={'my-4'}>
+            Alice-Salomon-Platz 3<br /> 12627 Berlin
+          </p>
+          <div className={'inline-flex-space'}>
+            <Link href={registryOfficeMapsLink}>
+              <a>
+                <RiRoadMapFill size={'68px'} />
+                Auf Google Map&lsquo;s
+              </a>
+            </Link>
+          </div>
+        </div>
+      </div>
+      <div className="view">
+        <div className="main-text-wrapper max-width-460">
+          <h1 className={'mb-8'}>Wir feiern mit euch</h1>
+          <p>...ab 15:00 Uhr im Spreespeicher.</p>
+          <p className={'my-4'}>
+            Zusammen entspannt an der Spree sitzen.
+            <br />
+          </p>
+          <p>Für Getränke sowie frisches vom Grill.</p>
           <p className={'my-4'}>
             Alice-Salomon-Platz 3<br /> 12627 Berlin
           </p>
