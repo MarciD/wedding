@@ -3,6 +3,9 @@ import Link from 'next/link';
 import { AiOutlinePhone, AiOutlineWhatsApp } from 'react-icons/ai';
 import { RiRoadMapFill } from 'react-icons/ri';
 
+const spreespeicherMapsLink =
+  // eslint-disable-next-line max-len
+  'https://www.google.com/maps/place/Capitol+Yard+Golf+Lounge/@52.5018045,13.4489895,15z/data=!4m2!3m1!1s0x0:0xb8680625eface940?sa=X&ved=2ahUKEwiXmfTC94n5AhVAnP0HHR1-D9AQ_BJ6BAhhEAU';
 const registryOfficeMapsLink =
   // eslint-disable-next-line max-len
   'https://www.google.com/maps/place/Standesamt+Marzahn-Hellersdorf/@52.5371662,13.6036615,15z/data=!4m5!3m4!1s0x0:0xb23ad5e03218232e!8m2!3d52.5371662!4d13.6036615';
@@ -86,17 +89,19 @@ const Home: NextPage = () => {
       <div className="view">
         <div className="main-text-wrapper max-width-460">
           <h1 className={'mb-8'}>Wir feiern mit euch</h1>
-          <p>...ab 15:00 Uhr im Spreespeicher.</p>
-          <p className={'my-4'}>
-            Zusammen entspannt an der Spree sitzen.
-            <br />
+          <p>...ab 15:00 Uhr im Spreespeicher Berlin.</p>
+          <p className={'my-4'}>Zusammen entspannt an der Spree sitzen.</p>
+          <p>
+            Für Getränke sowie frisches vom Grill und legga buffet ist freilich
+            gesorgt.
           </p>
-          <p>Für Getränke sowie frisches vom Grill.</p>
           <p className={'my-4'}>
-            Alice-Salomon-Platz 3<br /> 12627 Berlin
+            Stralauer Allee 2,
+            <br /> 10245 Berlin,
+            <br /> Eingang 2B, Capitol Yard Golf Lounge
           </p>
           <div className={'inline-flex-space'}>
-            <Link href={registryOfficeMapsLink}>
+            <Link href={spreespeicherMapsLink}>
               <a>
                 <RiRoadMapFill size={'68px'} />
                 Auf Google Map&lsquo;s
