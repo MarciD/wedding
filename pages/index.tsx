@@ -35,7 +35,7 @@ const Home: NextPage = () => {
         <div className="main-text-wrapper max-width-460">
           <h1 className={'mb-8'}>Wir bitten um Zusagen!</h1>
           <p>
-            Bitte gebt uns bis spätestens <b>04.08.2022</b> Bescheid ob Ihr
+            Bitte gebt uns bis spätestens <b>04.08.2022</b> Bescheid, ob Ihr
             kommt oder nicht.
           </p>
           <p className={'my-4'}>(Mit Namen und Alter)</p>
@@ -69,8 +69,9 @@ const Home: NextPage = () => {
           <h1 className={'mb-8'}>Wir Trauen uns</h1>
           <p>...um 12:30 Uhr im Standesamt Helle Mitte.</p>
           <p className={'my-4'}>
-            Wer dabei sein möchte soll sich bitte um 12:00Uhr vor dem Standesamt
-            befinden.
+            Wer dabei sein möchte, soll sich bitte um 11:30 Uhr vor dem
+            Standesamt einfinden. Um 12:30 Uhr ist die Trauung vor der
+            Standesbeamtin.
           </p>
           <p>Bei der Trauung selbst sind die Plätze jedoch begrenzt.</p>
           <p className={'my-4'}>
@@ -89,11 +90,12 @@ const Home: NextPage = () => {
       <div className="view">
         <div className="main-text-wrapper max-width-460">
           <h1 className={'mb-8'}>Wir feiern mit euch</h1>
-          <p>...ab 15:00 Uhr im Spreespeicher Berlin.</p>
-          <p className={'my-4'}>Zusammen entspannt an der Spree sitzen.</p>
-          <p>
-            Für Getränke sowie frisches vom Grill und legga buffet ist freilich
-            gesorgt.
+          <p> im Spreespeicher Berlin.</p>
+          <p className={'mb-4'}>
+            Einlass ist ab 15:00 Uhr mit Sektempfang und Canapés.
+          </p>
+          <p className={'mb-4'}>
+            Für unser leibliches Wohl ist selbstverständllich gesorgt.
           </p>
           <p className={'my-4'}>
             Stralauer Allee 2,
@@ -108,6 +110,68 @@ const Home: NextPage = () => {
               </a>
             </Link>
           </div>
+        </div>
+      </div>
+      <div className="view">
+        <div className="main-text-wrapper max-width-460">
+          <h1 className={'mb-8'}>Zeitplan - Standesamt</h1>
+          <ul>
+            <li className={'mb-2'}>11:30 Uhr - Treffen vor dem Standesamt</li>
+            <li className={'mb-2'}>12:30 Uhr - Trauung im Standesamt</li>
+            <li className={'mb-2'}>
+              13:00 Uhr - Sektempfang vor dem Standesamt
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div className="view">
+        <div className="main-text-wrapper max-width-460">
+          <h1 className={'mb-8'}>Zeitplan - Spreespeicher</h1>
+          <ul>
+            <li className={'mb-2'}>
+              ab 15:00 Uhr - Einlass mit Sektempfang und Canapés
+            </li>
+            <li className={'mb-2'}>18:00 Uhr - BBQ</li>
+            <li className={'mb-2'}>20:00 Uhr - Tanz und Feierei</li>
+            <li className={'mb-2'}>23:30 Uhr - Letzter Gong</li>
+            <li className={'mb-2'}>00:30 Uhr - Ende</li>
+          </ul>
+        </div>
+      </div>
+      <div className="view">
+        <div className="main-text-wrapper max-width-460">
+          <h1 className={'mb-8'}>Wissenswertes</h1>
+          <h2>Dresscode</h2>
+          <p className={'mb-4'}>Abendgarderobe! </p>
+          <p>
+            Um ein rotes Accessoire wird gebeten (Blume, Schlips, Kleid etc.)
+            <br />
+            <br />
+            Unser größtes Geschenk ist es, mit euch zu feiern!
+            <br />
+            <br /> Wenn ihr uns zusätzlich eine Freude machen wollt, danken wir
+            euch herzlich für einen Beitrag zu unseren Flitterwochen.
+          </p>
+        </div>
+      </div>
+      <div className="view">
+        <div className="main-text-wrapper max-width-460">
+          <h1 className={'mb-8'}>Rückfragen</h1>
+          <p className={'mb-6'}>
+            Bei Rückfragen könnt Ihr euch gerne an folgende Personen wenden:
+          </p>
+          <ul>
+            <li className={'mb-4'}>
+              <Link href={'tel:+4917613745281'}>
+                <a>Sandra - 0176 / 13745281</a>
+              </Link>
+            </li>
+            <li>
+              <Link href={'tel:+4917667831490'}>
+                <a>Steffi - 0176 / 67831490</a>
+              </Link>
+            </li>
+          </ul>
         </div>
       </div>
     </>
